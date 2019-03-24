@@ -1,19 +1,20 @@
-let money = prompt ("Ваш бюджет на месяц?", "");
-let time = prompt ("Введите дату в формате YYYY-MM-DD", "YYYY-MM-DD");
+let money = prompt ("Ваш бюджет на месяц?", ''),
+    time = prompt ("Введите дату в формате YYYY-MM-DD", '');
 let appData = {
-    money,
-    time,
-    expenses: 0,
-    optionalExpenses:,
-    income: 0,
+    budget: money,
+    timeData : time,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
     savings: false
 };
 
-let itemOfExpenses = prompt ("Введите обязательную статью расходов в этом месяце", "");
-let itemCost = prompt ("Во сколько обойдется?", "");
-const expenses = {
-    itemOfExpenses : itemCost
-};
+let itemOfExpenses1 = prompt ("Введите обязательную статью расходов в этом месяце", ''),
+    itemCost1 = prompt ("Во сколько обойдется?", ''),
+    itemOfExpenses2 = prompt ("Введите обязательную статью расходов в этом месяце", ''),
+    itemCost2 = prompt ("Во сколько обойдется?", '');
 
-let dayBudget = (money - itemCost) / 30;
-alert (dayBudget); 
+appData.expenses.itemOfExpenses1 = itemCost1; 
+appData.expenses.itemOfExpenses2 = itemCost2; 
+
+alert (appData.budget / 30); 
